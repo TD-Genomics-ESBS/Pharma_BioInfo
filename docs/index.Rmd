@@ -1,5 +1,5 @@
 ---
-title: "NGS reads"
+title: "Practical 1: NGS reads"
 author: "Dorine MERLAT"
 date: "2024-02-13"
 output: html_document
@@ -9,22 +9,72 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+To practise quality control and pre-processing of raw NGS data, we will use small datasets. The tools are available in Galaxy, a platform for omics data analysis.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+First step: log on to <https://usegalaxy.fr>. For that, click on _Log in or register a new account_ (at the top of the page).
 
-```{r cars}
-summary(cars)
-```
+Then, to ensure you have sufficient resources, go to the url :
 
-## Including Plots
+<https://usegalaxy.fr/join-training/td1genomics/>
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+## Illumina SE
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Optional: You can rename your history (right panel).
+
+The 1st data set concerns a metagenomic study of the microbiome of the oral cavity of a snake. After extraction and fragmentation of the sample DNA, part of the 16S rRNA gene was amplified and sequenced (Illumina Single End) in order to identify the bacteria present. Due to time constraints, only part of the data will be analysed.
+
+### Raw data: FASTQ file
+
+Import the FASTQ file from the zenodo server:
+
+Copy the address of the link:
+
+<https://zenodo.org/record/3977236/files/female_oral2.fastq-4143.gz>
+
+In Galaxy, use the Upload Data button (top left) then Paste/Fetch data, copy the link and launch (start).
+
+2. Look at the file (eye icon).
+
+- What are the characteristics of the FASTQ format?
+
+- Given that the scores are encoded using the SANGER/Illumina 1.8+ system, what is the score value for most of the bases at the start of the 1st read? Is this satisfactory?
+    
+### Quality control using FastQE and FastQC
+
+Open the FASTQ Quality Control toolbox (left panel).
+
+#### FastQE
+
+Explore the quality of your footage with FASTQE. “Mean scores” corresponds to the average of the scores calculated over all readings at each position. Scores are represented by emojis (ranked from 0 to 41):
+
+🚫❌👺💔🙅👾👿💀👻🙈🙉🙊🐵😿😾🙀💣🔥😡💩⚠️
+😀😅😏😊😙😗😚😃😘😆😄😋😄😝😛😜😉😁😄😎😍
+
+- What is the general trend for this dataset?
+
+#### FastQC
+Explore the quality of reads with FastQC (default settings). See the FastQC website for help and examples of analysis.
+
+- Per Base Sequence Quality: How long are the reads? How does the quality evolve along the reads?
+
+- Per sequence quality scores: What can be deduced from this graph?
+
+- Per base sequence content: In the case of genome sequencing (without specific amplification), what should this graph look like? Is the result obtained normal in our case?
+
+- Adapter content: Which adapter is detected?
+
+### Read procesing using Trimmomatic
+
+1.Use Trimmomatic (FASTQ Quality control section) to improve the quality of reads:
+
+  - Perform initial IllUMINACLIP step? Yes, select Nextera
+  - Sliding window trimming (proposed by default)
+  - Add a new Trimmomatic operation: Drop reads below a specific length (MINLEN): 20
+
+2. Perform FastQC analysis again on the processed reads and compare the results to the raw data. Is the result acceptable?
+
+3. What would be the next step to identify the microbial species present in the snake's oral cavity from these reads?
+
