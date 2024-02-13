@@ -1,6 +1,6 @@
-book_filename: "compgenomrReloaded"
+book_filename: "pharma_bioinfo"
 repo: https://github.com/TD-Genomics-ESBS/Pharma_BioInfo/
-output_dir: _book
+output_dir: docs
 # clean: [packages.bib, bookdown.bbl]
 delete_merged_file: true
 language:
