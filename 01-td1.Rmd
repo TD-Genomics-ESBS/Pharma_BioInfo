@@ -1,5 +1,4 @@
 # NGS reads
-## Introduction
 
 To practise quality control and pre-processing of raw NGS data, we will use small datasets. The tools are available in Galaxy, a platform for omics data analysis.
 
@@ -18,7 +17,7 @@ The 1st data set concerns a metagenomic study of the microbiome of the oral cavi
 
 ### Raw data: FASTQ file
 
-Import the FASTQ file from the zenodo server:
+1. Import the FASTQ file from the zenodo server:
 
 Copy the address of the link:
 
@@ -58,15 +57,40 @@ Explore the quality of reads with FastQC (default settings). See the FastQC webs
 
 ### Read procesing using Trimmomatic
 
-1.Use Trimmomatic (FASTQ Quality control section) to improve the quality of reads:
+1. Use Trimmomatic (FASTQ Quality control section) to improve the quality of reads:
 
-  - Perform initial IllUMINACLIP step? Yes, select Nextera
-  - Sliding window trimming (proposed by default)
-  - Add a new Trimmomatic operation: Drop reads below a specific length (MINLEN): 20
+- Perform initial IllUMINACLIP step? Yes, select Nextera
+
+- Sliding window trimming (proposed by default)
+  
+- Add a new Trimmomatic operation: Drop reads below a specific length (MINLEN): 20
 
 2. Perform FastQC analysis again on the processed reads and compare the results to the raw data. Is the result acceptable?
 
 3. What would be the next step to identify the microbial species present in the snake's oral cavity from these reads?
+
+## PacBio Hifi
+
+This dataset contains 50,000 PacBio HiFi reads from the sequencing of a human genome (PacBio - GIAB sample HG002).
+
+1. Import the file into Galaxy:
+
+<https://zenodo.org/api/files/ff9aa6e3-3d69-451f-9798-7ea69b475989/m64011_190830_220126.Q20.subsample.fastq.gz>
+
+2. Perform quality control with Nanoplot (available in Nanopore). This tool can only be used for long reads (PacBio or Nanopore):
+
+Options for customizing the plot created:
+
+- Specify the bivariate format of the plots: dot
+
+- Show the N50 mark in the read length histogram: Yes
+
+3. Analysis:
+
+- What is the average length of reads? Significant variations in read size are observed in the PacBio data, unlike the Illumina data. Why?
+- What does N5O represent in this case?
+- How useful can the Yield by length chart be?
+- Read length vs Average read qualiy plot using dots: No read is observed with Q<20. Why? Is there a link between read size and quality?
 
 ## Nanopore
 
@@ -81,7 +105,7 @@ The last set corresponds to nanopore reads obtained from a plant genome. We will
 
 - How many reads are available? How many bases does this represent?
 
--How do you explain the discrepancy between median reading size and N50?
+- How do you explain the discrepancy between median reading size and N50?
 
 - Basecalled reads length: what can you say about the distribution of lengths?*
 

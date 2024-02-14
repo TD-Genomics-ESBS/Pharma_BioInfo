@@ -35,3 +35,9 @@ multiple-alignment
 ngs-reads
 dd
 intro
+functional-analysis-and-sequence-comparison
+similarity-searches
+pacbio-hifi
+sequence-retrieval-with-an-access-number-nucleic-sequence-nc_045512
+database-exploration-using-entrez
+sequence-retrieval-with-an-access-number

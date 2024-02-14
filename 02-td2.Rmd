@@ -1,6 +1,10 @@
 # Exploration of sequence databases
 
-## Database exploration using Entrez (<http://www.ncbi.nlm.nih.gov/>).
+In this practical, we will explore the main public genomic databases: NCBI (Nucleotides, Taxonomy...), UniProt, InterProScan...
+
+## Database exploration using Entrez
+
+Go to <http://www.ncbi.nlm.nih.gov/>.
 
 ### Search by annotation (Filters/Advanced)
 
@@ -18,11 +22,13 @@ Select Nucleotide and search for sequences containing the BRCA1 gene for Homo sa
 
 - How many genomes are available in the Genome database for Animals, Fungi, Plants (Viridiplantae) and Eukaryotes? Please comment.
 
-### To which bank does the sequence NC_045512 belong according to the access number?
+- To which bank does the sequence NC_045512 belong according to the access number?
 
-Return on NCBI website.
+### Sequence retrieval with an access number
 
-- Select Nucleotide on the NCBI website and search for the sequence with the access number NC_045512. What is it about? How long is the genome?
+Return on NCBI website and search the nucleic sequence NC_045512. For that, select Nucleotide on the NCBI website and search for the sequence with the access number NC_045512. 
+
+- What is it about? How long is the genome?
 
 - Look at the field *Comment*. To which bank does the sequence NC_045512 belong? Is it a reliable entry? What sequencing technology was used? What can you say about this entry compared to the original GenBank entry (1st SARS-Cov-2 genome sequence)?
 
