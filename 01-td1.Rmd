@@ -1,4 +1,4 @@
-# Practical 1: NGS reads
+# NGS reads
 ## Introduction
 
 To practise quality control and pre-processing of raw NGS data, we will use small datasets. The tools are available in Galaxy, a platform for omics data analysis.

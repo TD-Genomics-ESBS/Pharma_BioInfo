@@ -1,1 +1,1 @@
-# Practical 3: Functional analysis and sequence comparison
+# Functional analysis and sequence comparison

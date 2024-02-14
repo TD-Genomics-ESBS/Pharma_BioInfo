@@ -15,19 +15,13 @@ description: "This is a minimal example of using
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Introduction
+# Introduction {-}
 
+You find here all the subjects of the bioinformatics for pharmacy's practicals. For each session, some exercices are about the breast cancer and other are about other genomics's subjects. 
 
-gff
+### Galaxy
 
-## Main Exercices
-
-
-## COmplementary exercices
-
-## Galaxy
-
-Use galaxy
+For the practicals using walaxy, you need to log on to <https://usegalaxy.fr>. Then, to ensure you have sufficient resources, go to the url indicate at the begining of the practical.
 
 
 

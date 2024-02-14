@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 Main Exercices | Practicals of Bioinformatics for Pharmacy</title>
+  <title>3.1 Database exploration using Entrez (http://www.ncbi.nlm.nih.gov/). | Practicals of Bioinformatics for Pharmacy</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book." />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 Main Exercices | Practicals of Bioinformatics for Pharmacy" />
+  <meta property="og:title" content="3.1 Database exploration using Entrez (http://www.ncbi.nlm.nih.gov/). | Practicals of Bioinformatics for Pharmacy" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 Main Exercices | Practicals of Bioinformatics for Pharmacy" />
+  <meta name="twitter:title" content="3.1 Database exploration using Entrez (http://www.ncbi.nlm.nih.gov/). | Practicals of Bioinformatics for Pharmacy" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="complementary-exercices.html"/>
+<link rel="prev" href="exploration-of-sequence-databases.html"/>
+<link rel="next" href="search-for-protein-sequences-in-uniprotkb-www.uniprot.html"/>
 <script src="assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -72,15 +72,15 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> bibliography: [book.bib, packages.bib]</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="main-exercices.html"><a href="main-exercices.html"><i class="fa fa-check"></i><b>1.1</b> Main Exercices</a></li>
 <li class="chapter" data-level="1.2" data-path="complementary-exercices.html"><a href="complementary-exercices.html"><i class="fa fa-check"></i><b>1.2</b> COmplementary exercices</a></li>
 <li class="chapter" data-level="1.3" data-path="galaxy.html"><a href="galaxy.html"><i class="fa fa-check"></i><b>1.3</b> Galaxy</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="ngs-reads.html"><a href="ngs-reads.html"><i class="fa fa-check"></i><b>2</b> NGS reads</a>
+<li class="chapter" data-level="2" data-path="practical-1-ngs-reads.html"><a href="practical-1-ngs-reads.html"><i class="fa fa-check"></i><b>2</b> Practical 1: NGS reads</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="introduction-1.html"><a href="introduction-1.html"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
 <li class="chapter" data-level="2.2" data-path="illumina-se.html"><a href="illumina-se.html"><i class="fa fa-check"></i><b>2.2</b> Illumina SE</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="illumina-se.html"><a href="illumina-se.html#raw-data-fastq-file"><i class="fa fa-check"></i><b>2.2.1</b> Raw data: FASTQ file</a></li>
@@ -126,16 +126,42 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="main-exercices" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Main Exercices<a href="main-exercices.html#main-exercices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="database-exploration-using-entrez-httpwww.ncbi.nlm.nih.gov." class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Database exploration using Entrez (<a href="http://www.ncbi.nlm.nih.gov/" class="uri">http://www.ncbi.nlm.nih.gov/</a>).<a href="database-exploration-using-entrez-httpwww.ncbi.nlm.nih.gov..html#database-exploration-using-entrez-httpwww.ncbi.nlm.nih.gov." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="search-by-annotation-filtersadvanced" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Search by annotation (Filters/Advanced)<a href="database-exploration-using-entrez-httpwww.ncbi.nlm.nih.gov..html#search-by-annotation-filtersadvanced" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Select Nucleotide and search for sequences containing the BRCA1 gene for Homo sapiens using filters or advanced search.</p>
+<ul>
+<li><p>Why are there several sequences in RefSeq? In Genbank?</p></li>
+<li><p>Look at the sequence KT152889. Quickly position the annotated elements for the gene on a diagram. What is the position of the variation on the sequence? What does it correspond to (type, codon)?</p></li>
+<li><p>Among the features, the sequence source provides a cross-reference to the NCBI Taxonomy bank. Follow this link.</p></li>
+</ul>
+</div>
+<div id="taxonomy-database" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Taxonomy database<a href="database-exploration-using-entrez-httpwww.ncbi.nlm.nih.gov..html#taxonomy-database" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>What human sub-species are listed in the Taxonomy database?</p></li>
+<li><p>How many genomes are available in the Genome database for Animals, Fungi, Plants (Viridiplantae) and Eukaryotes? Please comment.</p></li>
+</ul>
+</div>
+<div id="to-which-bank-does-the-sequence-nc_045512-belong-according-to-the-access-number" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> To which bank does the sequence NC_045512 belong according to the access number?<a href="database-exploration-using-entrez-httpwww.ncbi.nlm.nih.gov..html#to-which-bank-does-the-sequence-nc_045512-belong-according-to-the-access-number" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Return on NCBI website.</p>
+<ul>
+<li><p>Select Nucleotide on the NCBI website and search for the sequence with the access number NC_045512. What is it about? How long is the genome?</p></li>
+<li><p>Look at the field <em>Comment</em>. To which bank does the sequence NC_045512 belong? Is it a reliable entry? What sequencing technology was used? What can you say about this entry compared to the original GenBank entry (1st SARS-Cov-2 genome sequence)?</p></li>
+<li><p>Look for the coding region corresponding to the N protein (nucleocapsid phosphoprotein). What do you think about the composition of this protein? What problem might such a sequence pose in a similarity search?</p></li>
+<li><p>Display the genome sequence in fasta format. What are the characteristics of this format compared to the RefSeq format?</p></li>
+</ul>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="complementary-exercices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exploration-of-sequence-databases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="search-for-protein-sequences-in-uniprotkb-www.uniprot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
