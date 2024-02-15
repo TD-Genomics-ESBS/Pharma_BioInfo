@@ -32,6 +32,11 @@ Recherchez dans Nucleotide les séquences comportant le gène BRCA1 pour Homo sa
 
 > ❓ Quelles sous-espèces humaines sont répertoriées dans la banque Taxonomy ?
 
+> ❓ Quelles autres organismes sont répertoriés au sein des Hominina 
+e ?
+
+> ❓ Quels sont les ordres les plus proches de l’ordre des primates ? Lequel d’entre eux a le plus de protéines disponibles ?
+
 > ❓ Combien de génomes sont disponibles dans la banque Genome pour les Animaux, les champignons (Fungi), les plantes (Viridiplantae) et les eucaryotes ? Commentez.
 
 ## Recherche de séquences protéiques dans UniProtKb 
