@@ -1,14 +1,14 @@
 # Exploration des banques de séquences
 
-In this practical, we will explore the main public genomic databases: NCBI (Nucleotides, Taxonomy...), UniProt, InterProScan...
+Dans ce TD, nous explorerons les principales bases de données génomiques publiques : NCBI (Nucléotides, Taxonomie...), UniProt, InterProScan...
 
 ## Interrogation des banques par Entrez
 
 Aller sur <http://www.ncbi.nlm.nih.gov/>.
 
-### Utilisation du n° d’accès : séquence nucléique NC_045512
+### Utilisation du n° d’accès
 
-Sélectionnez Nucleotide sur le site du NCBI et recherchez la séquence NC_045512. De quoi s’agit-il ? Quelle est la longueur du génome ?
+Sélectionnez *Nucleotide* sur le site du NCBI et recherchez la séquence NC_045512. De quoi s’agit-il ? Quelle est la longueur du génome ?
 
 > ❓ Consultez le champ *Comment*. De quelle banque provient cette séquence ? Est-elle fiable ? Quelle technologie de séquençage a été utilisée ? Que pouvez-vous dire de cette entrée par rapport à l’entrée initiale GenBank (1ère séquence du génome du SARS-Cov-2) ?
 
@@ -34,9 +34,9 @@ Recherchez dans Nucleotide les séquences comportant le gène BRCA1 pour Homo sa
 
 > ❓ Combien de génomes sont disponibles dans la banque Genome pour les Animaux, les champignons (Fungi), les plantes (Viridiplantae) et les eucaryotes ? Commentez.
 
-## Recherche de séquences protéiques dans UniProtKb (<www.uniprot.org>)
+## Recherche de séquences protéiques dans UniProtKb 
 
-Sélectionner la banque UniprotKB.
+Sélectionner la banque UniprotKB (<www.uniprot.org>).
 
 ### Utilisation des champs (Advanced search)
 
@@ -56,34 +56,34 @@ dans Download).
 
 ### Function – GO annotations
 
-- The GO ontology allows to describe proteins according to 3 aspects. Which ones?
+> ❓ La Go ontology permet de décrire les protéines selon 3 aspects. Lesquels ?
 
-- Follow the link of GO entry GO:0004438.  What is it (name, description)? What type of GO does it belong to? How often is it used to describe proteins?
+> ❓ Suivez le lien de l'entrée GO:0004438.  Qu'est-ce que c'est (nom, description) ? A quel type de GO appartient-il ? Quelle est sa fréquence d'utilisation pour décrire les protéines ?
 
-- Are there any synonyms for this GO term?
+> ❓ Existe-t-il des synonymes pour ce terme GO ?
 
 ### Structure
 
-- What can you say about the structures obtained experimentally for the protein?
+> ❓ Que pouvez-vous dire des structures obtenues expérimentalement pour la protéine ?
 
-- What can you say about the reliability of the AlphaFold prediction for this protein?
+> ❓ Que pouvez-vous dire de la fiabilité de la prédiction AlphaFold pour cette protéine ?
 
-### External links tab (top of the page)
+### Onglet *External links* (haut de page)
 
 #### Sequence databases
 
-- Why are there many more links to EMBL/GenBank/DDBJ than to RefSeq?
+> ❓ Pourquoi y a-t-il beaucoup plus de liens vers EMBL/GenBank/DDBJ que vers RefSeq ?
 
 #### Families and domains in INTERPRO database
 
-- Display the graphical view (View protein in InterPro). How many distinct domains are identified in this protein?
+> ❓ Affichez la représentation graphique (View protein in InterPro). Combien y a-t-il de domaines protéiques distincts dans cette protéine ?
 
-- Domain: IPR000082 SEA domain. 
+Domaine: *IPR000082 SEA domain* 
 
-  - From which banks are the 3 signatures associated with this InterPro entry?
+> ❓ De quelles banques proviennent les 3 signatures associées à cette entrée InterPro?
   
-  - Follow the link to the PFAM signature. Display the signature. What is the most conserved amino acid in this domain?
+> ❓ Suivez le lien vers la signature PFAM associée. Affichez la signature.
 
-Search the Q13615 entry (Myotubularin-related protein 3) and find the active site : IPR016130 Tyrosine specific protein phosphatases active site.
+Recherchez l'entrée Q13615 (Myotubularin-related protein 3) et trouvez le site actif : IPR016130 Tyrosine specific protein phosphatases active site.
 
-- Have a look at the ProSite signature associated to this site. What is the main problem of the motif?
+> ❓ Jetez un coup d'œil à la signature ProSite associée à ce site. Quel est le problème principal du motif ?

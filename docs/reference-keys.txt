@@ -51,3 +51,10 @@ banque-taxonomy
 recherche-de-séquences-protéiques-dans-uniprotkb-www.uniprot.org
 utilisation-des-champs-advanced-search
 exemple-dentrée-swissprot-muc1_human
+onglet-external-links-haut-de-page
+utilisation-du-n-daccès
+recherche-de-séquences-protéiques-dans-uniprotkb
+analyse-fonctionnelle-et-comparaison-des-séquences
+recherches-de-similitude
+alignement-multiple
+données-brutes-fichier-fastq

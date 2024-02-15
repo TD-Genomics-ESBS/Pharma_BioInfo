@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>TD 1 Lectures NGS | Bioinformatique pour la pharmacie</title>
-  <meta name="description" content="TD 1 Lectures NGS | Bioinformatique pour la pharmacie" />
+  <title>2.2 Recherche de séquences protéiques dans UniProtKb | Bioinformatique pour la pharmacie</title>
+  <meta name="description" content="2.2 Recherche de séquences protéiques dans UniProtKb | Bioinformatique pour la pharmacie" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="TD 1 Lectures NGS | Bioinformatique pour la pharmacie" />
+  <meta property="og:title" content="2.2 Recherche de séquences protéiques dans UniProtKb | Bioinformatique pour la pharmacie" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="TD 1 Lectures NGS | Bioinformatique pour la pharmacie" />
+  <meta name="twitter:title" content="2.2 Recherche de séquences protéiques dans UniProtKb | Bioinformatique pour la pharmacie" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="illumina-se.html"/>
+<link rel="prev" href="interrogation-des-banques-par-entrez.html"/>
+<link rel="next" href="functional-analysis-and-sequence-comparison.html"/>
 <script src="assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -77,7 +77,7 @@
 <ul>
 <li class="chapter" data-level="1.1" data-path="illumina-se.html"><a href="illumina-se.html"><i class="fa fa-check"></i><b>1.1</b> Illumina SE</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="illumina-se.html"><a href="illumina-se.html#données-brutes-fichier-fastq"><i class="fa fa-check"></i><b>1.1.1</b> Données brutes : fichier FASTQ</a></li>
+<li class="chapter" data-level="1.1.1" data-path="illumina-se.html"><a href="illumina-se.html#raw-data-fastq-file"><i class="fa fa-check"></i><b>1.1.1</b> Raw data: FASTQ file</a></li>
 <li class="chapter" data-level="1.1.2" data-path="illumina-se.html"><a href="illumina-se.html#contrôle-qualité-avec-fastqe-et-fastqc"><i class="fa fa-check"></i><b>1.1.2</b> Contrôle qualité avec FastQE et FastQC</a></li>
 <li class="chapter" data-level="1.1.3" data-path="illumina-se.html"><a href="illumina-se.html#read-procesing-using-trimmomatic"><i class="fa fa-check"></i><b>1.1.3</b> Read procesing using Trimmomatic</a></li>
 </ul></li>
@@ -101,9 +101,9 @@
 <li class="chapter" data-level="2.2.5" data-path="recherche-de-séquences-protéiques-dans-uniprotkb.html"><a href="recherche-de-séquences-protéiques-dans-uniprotkb.html#onglet-external-links-haut-de-page"><i class="fa fa-check"></i><b>2.2.5</b> Onglet <em>External links</em> (haut de page)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="analyse-fonctionnelle-et-comparaison-des-séquences.html"><a href="analyse-fonctionnelle-et-comparaison-des-séquences.html"><i class="fa fa-check"></i><b>3</b> Analyse fonctionnelle et comparaison des séquences</a></li>
-<li class="chapter" data-level="4" data-path="recherches-de-similitude.html"><a href="recherches-de-similitude.html"><i class="fa fa-check"></i><b>4</b> Recherches de similitude</a></li>
-<li class="chapter" data-level="5" data-path="alignement-multiple.html"><a href="alignement-multiple.html"><i class="fa fa-check"></i><b>5</b> Alignement multiple</a></li>
+<li class="chapter" data-level="3" data-path="functional-analysis-and-sequence-comparison.html"><a href="functional-analysis-and-sequence-comparison.html"><i class="fa fa-check"></i><b>3</b> Functional analysis and sequence comparison</a></li>
+<li class="chapter" data-level="4" data-path="similarity-searches.html"><a href="similarity-searches.html"><i class="fa fa-check"></i><b>4</b> Similarity searches</a></li>
+<li class="chapter" data-level="5" data-path="multiple-alignment.html"><a href="multiple-alignment.html"><i class="fa fa-check"></i><b>5</b> Multiple alignment</a></li>
 </ul>
 
       </nav>
@@ -121,21 +121,88 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lectures-ngs" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">TD 1</span> Lectures NGS<a href="lectures-ngs.html#lectures-ngs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Pour vous familiariser avec le contrôle qualité et le prétraitement des données brutes NGS, nous nous exercerons sur de petits sets de données. Les outils utilisés sont disponibles dans Galaxy, une plateforme pour l’analyse de données omiques.</p>
-<p>Avant de continuer : connectez-vous sur le site <a href="https://usegalaxy.fr" class="uri">https://usegalaxy.fr</a>. Pour cela, cliquez sur Se connecter ou créer un nouveau compte_ (en haut de la page).</p>
-<p>puis pour disposer de ressources suffisantes, allez sur l’url :</p>
-<p><a href="https://usegalaxy.fr/join-training/TD1_Bioinformatique/" class="uri">https://usegalaxy.fr/join-training/TD1_Bioinformatique/</a></p>
-<p>Vous pouvez ensuite retourner sur Galaxy.</p>
+<div id="recherche-de-séquences-protéiques-dans-uniprotkb" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Recherche de séquences protéiques dans UniProtKb<a href="recherche-de-séquences-protéiques-dans-uniprotkb.html#recherche-de-séquences-protéiques-dans-uniprotkb" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sélectionner la banque UniprotKB (&lt;www.uniprot.org&gt;).</p>
+<div id="utilisation-des-champs-advanced-search" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Utilisation des champs (Advanced search)<a href="recherche-de-séquences-protéiques-dans-uniprotkb.html#utilisation-des-champs-advanced-search" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>❓ Combien de séquences protéiques humaines sont répertoriées dans UniprotKB ? dans SwissProt ?</p>
+</blockquote>
+<blockquote>
+<p>❓ Rechercher la myotubularin-related protein 3 humaine. Comparer les entrées obtenues. Laquelle est-il préférable d’utiliser ?</p>
+</blockquote>
 </div>
+<div id="exemple-dentrée-swissprot-muc1_human" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Exemple d’entrée SwissProt : MUC1_HUMAN<a href="recherche-de-séquences-protéiques-dans-uniprotkb.html#exemple-dentrée-swissprot-muc1_human" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>❓ L’existence de cette protéine est-elle établie (voir Protein existence en haut de page)?</p>
+</blockquote>
+<blockquote>
+<p>❓ Comparez le format proposé par défaut, le format texte et le format fasta (accessibles
+dans Download).</p>
+</blockquote>
+<blockquote>
+<p>❓ Combien d’isoformes décrites existe-t-il pour cette protéine (voir Sequences) ? Alignez les isoformes (Align) et voyez en quoi elles diffèrent.</p>
+</blockquote>
+</div>
+<div id="function-go-annotations" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Function – GO annotations<a href="recherche-de-séquences-protéiques-dans-uniprotkb.html#function-go-annotations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>❓ La Go ontology permet de décrire les protéines selon 3 aspects. Lesquels ?</p>
+</blockquote>
+<blockquote>
+<p>❓ Suivez le lien de l’entrée <a href="GO:0004438" class="uri">GO:0004438</a>. Qu’est-ce que c’est (nom, description) ? A quel type de GO appartient-il ? Quelle est sa fréquence d’utilisation pour décrire les protéines ?</p>
+</blockquote>
+<blockquote>
+<p>❓ Existe-t-il des synonymes pour ce terme GO ?</p>
+</blockquote>
+</div>
+<div id="structure" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Structure<a href="recherche-de-séquences-protéiques-dans-uniprotkb.html#structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>❓ Que pouvez-vous dire des structures obtenues expérimentalement pour la protéine ?</p>
+</blockquote>
+<blockquote>
+<p>❓ Que pouvez-vous dire de la fiabilité de la prédiction AlphaFold pour cette protéine ?</p>
+</blockquote>
+</div>
+<div id="onglet-external-links-haut-de-page" class="section level3 hasAnchor" number="2.2.5">
+<h3><span class="header-section-number">2.2.5</span> Onglet <em>External links</em> (haut de page)<a href="recherche-de-séquences-protéiques-dans-uniprotkb.html#onglet-external-links-haut-de-page" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="sequence-databases" class="section level4 hasAnchor" number="2.2.5.1">
+<h4><span class="header-section-number">2.2.5.1</span> Sequence databases<a href="recherche-de-séquences-protéiques-dans-uniprotkb.html#sequence-databases" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<blockquote>
+<p>❓ Pourquoi y a-t-il beaucoup plus de liens vers EMBL/GenBank/DDBJ que vers RefSeq ?</p>
+</blockquote>
+</div>
+<div id="families-and-domains-in-interpro-database" class="section level4 hasAnchor" number="2.2.5.2">
+<h4><span class="header-section-number">2.2.5.2</span> Families and domains in INTERPRO database<a href="recherche-de-séquences-protéiques-dans-uniprotkb.html#families-and-domains-in-interpro-database" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<blockquote>
+<p>❓ Affichez la représentation graphique (View protein in InterPro). Combien y a-t-il de domaines protéiques distincts dans cette protéine ?</p>
+</blockquote>
+<p>Domaine: <em>IPR000082 SEA domain</em></p>
+<blockquote>
+<p>❓ De quelles banques proviennent les 3 signatures associées à cette entrée InterPro?</p>
+</blockquote>
+<blockquote>
+<p>❓ Suivez le lien vers la signature PFAM associée. Affichez la signature.</p>
+</blockquote>
+<p>Recherchez l’entrée Q13615 (Myotubularin-related protein 3) et trouvez le site actif : IPR016130 Tyrosine specific protein phosphatases active site.</p>
+<blockquote>
+<p>❓ Jetez un coup d’œil à la signature ProSite associée à ce site. Quel est le problème principal du motif ?</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="illumina-se.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="interrogation-des-banques-par-entrez.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functional-analysis-and-sequence-comparison.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>

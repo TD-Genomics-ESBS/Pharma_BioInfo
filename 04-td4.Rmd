@@ -1,2 +1,2 @@
-# Similarity searches
+# Recherches de similitude
 

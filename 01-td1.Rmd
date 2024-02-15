@@ -17,7 +17,7 @@ Optionnel: Vous pouvez renommer votre historique (panneau de droite).
 
 Le 1er set de données concerne une étude métagénomique portant sur le microbiome de la cavité orale d'un serpent. Après extraction et fragmentation de l'ADN de l'échantillon, une partie de gène de l'ARNr 16S a été amplifié puis séquencé (Illumina Single End) afin d'identifier les bactéries présentes. Seule une partie des données sera analysée pour des raisons de temps.
 
-### Raw data: FASTQ file
+### Données brutes : fichier FASTQ
 
 1. Importez le fichier FASTQ depuis le serveur zenodo : 
 

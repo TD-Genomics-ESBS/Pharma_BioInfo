@@ -1,1 +1,1 @@
-# Functional analysis and sequence comparison
+# Analyse fonctionnelle et comparaison des séquences
