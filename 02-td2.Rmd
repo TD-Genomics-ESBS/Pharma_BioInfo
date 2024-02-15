@@ -47,14 +47,15 @@ Sélectionner la banque UniprotKB (<www.uniprot.org>).
 
 > ❓ Combien de séquences protéiques humaines sont répertoriées dans UniprotKB ? dans SwissProt ?
 
-> ❓ Rechercher la myotubularin-related protein 3 humaine. Comparer les entrées obtenues. Laquelle est-il préférable d’utiliser ?
+> ❓ Recherchez la protéine associée au gène BRCA1. Comparez les entrées obtenues. Quelle est la meilleure solution ?
 
-### Exemple d’entrée SwissProt : MUC1_HUMAN
+### Exemple d’entrée SwissProt
+
+Rechercher la protéine MUC1_HUMAN
 
 > ❓ L’existence de cette protéine est-elle établie (voir Protein existence en haut de page)?
 
-> ❓ Comparez le format proposé par défaut, le format texte et le format fasta (accessibles
-dans Download).
+> ❓ Comparez le format proposé par défaut, le format texte et le format fasta (accessibles dans Download).
 
 > ❓ Combien d’isoformes décrites existe-t-il pour cette protéine (voir Sequences) ? Alignez les isoformes (Align) et voyez en quoi elles diffèrent.
 
@@ -85,10 +86,14 @@ dans Download).
 
 Domaine: *IPR000082 SEA domain* 
 
-> ❓ De quelles banques proviennent les 3 signatures associées à cette entrée InterPro?
+> ❓ De quelles banques proviennent les 3 signatures associées à ce domaine  InterPro?
   
 > ❓ Suivez le lien vers la signature PFAM associée. Affichez la signature.
 
-Recherchez l'entrée Q13615 (Myotubularin-related protein 3) et trouvez le site actif : IPR016130 Tyrosine specific protein phosphatases active site.
+Dans un nouvel onglet, recherchez la protéine BRCA1_HUMAN dans InterProScan. 
 
-> ❓ Jetez un coup d'œil à la signature ProSite associée à ce site. Quel est le problème principal du motif ?
+> ❓ Combien y a-t-il de domaines protéiques distincts dans cette protéine ?
+
+> ❓ Suivez le lien  vers la signature PFAM associée au *Zinc finger, C3HC4 type (RING finger)*.  Affichez la signature et comparer là à celle du SEA domain de MUC1. 
+
+> ❓ Regarder la signature ProSite associée  au site conservé *Zinc finger RING-type signature*. Quel est le problème principal du motif ?

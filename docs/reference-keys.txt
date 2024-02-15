@@ -58,3 +58,4 @@ analyse-fonctionnelle-et-comparaison-des-séquences
 recherches-de-similitude
 alignement-multiple
 données-brutes-fichier-fastq
+exemple-dentrée-swissprot
