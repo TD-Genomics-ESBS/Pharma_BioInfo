@@ -1,14 +1,12 @@
 ---
-title: "Practicals of Bioinformatics for Pharmacy"
-author: "Dorine MERLAT"
+title: "Bioinformatique pour la pharmacie"
+author: "Dorine MERLAT - dorine.merlat@et.unistra.fr"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 # bibliography: [book.bib, packages.bib]
 # biblio-style: apalike
 link-citations: yes
-description: "This is a minimal example of using
-  the bookdown package to write a book."
 ---
 
 ```{r setup, include=FALSE}
@@ -17,11 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction {-}
 
-You find here all the subjects of the bioinformatics for pharmacy's practicals. For each session, some exercices are about the breast cancer and other are about other genomics's subjects. 
-
-### Galaxy
-
-For the practicals using walaxy, you need to log on to <https://usegalaxy.fr>. Then, to ensure you have sufficient resources, go to the url indicate at the begining of the practical.
+Vous trouverez ici tous les sujets des TD de bioinformatique. Dans chaque TD, certains exercices portent sur le cancer du sein, d'autres sont complémentaires et s'intéressent à d'autres organismes.
 
 
 

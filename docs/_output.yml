@@ -1,0 +1,93 @@
+# Exploration of sequence databases
+
+In this practical, we will explore the main public genomic databases: NCBI (Nucleotides, Taxonomy...), UniProt, InterProScan...
+
+## Database exploration using Entrez
+
+Go to <http://www.ncbi.nlm.nih.gov/>.
+
+### Search by annotation (Filters/Advanced)
+
+Select Nucleotide and search for sequences containing the BRCA1 gene for Homo sapiens using filters or advanced search.
+
+- Why are there several sequences in RefSeq? In Genbank?
+
+- Look at the sequence KT152889. Quickly position the annotated elements for the gene on a diagram. What is the position of the variation on the sequence? What does it correspond to (type, codon)?
+
+- Among the features, the sequence source provides a cross-reference to the NCBI Taxonomy bank. Follow this link.
+
+### Taxonomy database
+
+- What human sub-species are listed in the Taxonomy database?
+
+- How many genomes are available in the Genome database for Animals, Fungi, Plants (Viridiplantae) and Eukaryotes? Please comment.
+
+- To which bank does the sequence NC_045512 belong according to the access number?
+
+### Sequence retrieval with an access number
+
+Return on NCBI website and search the nucleic sequence NC_045512. For that, select Nucleotide on the NCBI website and search for the sequence with the access number NC_045512. 
+
+- What is it about? How long is the genome?
+
+- Look at the field *Comment*. To which bank does the sequence NC_045512 belong? Is it a reliable entry? What sequencing technology was used? What can you say about this entry compared to the original GenBank entry (1st SARS-Cov-2 genome sequence)?
+
+- Look for the coding region corresponding to the N protein (nucleocapsid phosphoprotein). What do you think about the composition of this protein? What problem might such a sequence pose in a similarity search?
+
+- Display the genome sequence in fasta format. What are the characteristics of this format compared to the RefSeq format?
+
+## Search for protein sequences in UniProtKB (www.uniprot.org)
+
+Select the UniProtKB database
+
+### Use of fields (Advanced Search)
+
+- How many human protein sequences are listed in the UniprotKb database? In Swissprot?
+
+- Search for the human myotubularin-related protein 3. Compare the obtained entries.
+
+- Which is better to use?
+
+### Example of a SwissProt entry: MUC1_HUMAN
+
+- Are we sure of the existence of this protein (see Protein existence at the top of the page)?
+
+- Compare the current format, the text format and the fasta format (see Download).
+
+- How is this protein involved in breast cancer?
+
+- How many isoforms are reported for this protein (see Sequences)? Align isoforms and see their differences.
+
+### Function – GO annotations
+
+- The GO ontology allows to describe proteins according to 3 aspects. Which ones?
+
+- Follow the link of GO entry GO:0004438.  What is it (name, description)? What type of GO does it belong to? How often is it used to describe proteins?
+
+- Are there any synonyms for this GO term?
+
+### Structure
+
+- What can you say about the structures obtained experimentally for the protein?
+
+- What can you say about the reliability of the AlphaFold prediction for this protein?
+
+### External links tab (top of the page)
+
+#### Sequence databases
+
+- Why are there many more links to EMBL/GenBank/DDBJ than to RefSeq?
+
+#### Families and domains in INTERPRO database
+
+- Display the graphical view (View protein in InterPro). How many distinct domains are identified in this protein?
+
+- Domain: IPR000082 SEA domain. 
+
+  - From which banks are the 3 signatures associated with this InterPro entry?
+  
+  - Follow the link to the PFAM signature. Display the signature. What is the most conserved amino acid in this domain?
+
+Search the Q13615 entry (Myotubularin-related protein 3) and find the active site : IPR016130 Tyrosine specific protein phosphatases active site.
+
+- Have a look at the ProSite signature associated to this site. What is the main problem of the motif?

@@ -41,3 +41,13 @@ pacbio-hifi
 sequence-retrieval-with-an-access-number-nucleic-sequence-nc_045512
 database-exploration-using-entrez
 sequence-retrieval-with-an-access-number
+contrôle-qualité-avec-fastqe-et-fastqc
+lectures-ngs
+exploration-des-banques-de-sequences
+interrogation-des-banques-par-entrez
+utilisation-du-n-daccès-séquence-nucléique-nc_045512
+recherche-par-lannotation-filtersadvanced
+banque-taxonomy
+recherche-de-séquences-protéiques-dans-uniprotkb-www.uniprot.org
+utilisation-des-champs-advanced-search
+exemple-dentrée-swissprot-muc1_human

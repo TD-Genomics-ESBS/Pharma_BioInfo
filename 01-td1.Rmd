@@ -1,113 +1,128 @@
-# NGS reads
+# Lectures NGS
 
-To practise quality control and pre-processing of raw NGS data, we will use small datasets. The tools are available in Galaxy, a platform for omics data analysis.
+Pour vous familiariser avec le contrôle qualité et le prétraitement des données brutes NGS, nous nous exercerons sur de petits sets de données. Les outils utilisés sont disponibles dans Galaxy, une plateforme pour l'analyse de données omiques. 
 
-First step: log on to <https://usegalaxy.fr>. For that, click on _Log in or register a new account_ (at the top of the page).
+Avant de continuer : connectez-vous sur le site <https://usegalaxy.fr>. Pour cela, cliquez sur Se connecter ou créer un nouveau compte_ (en haut de la page).
 
-Then, to ensure you have sufficient resources, go to the url :
+puis pour disposer de ressources suffisantes, allez sur l'url :
 
-<https://usegalaxy.fr/join-training/td1genomics/>
+<https://usegalaxy.fr/join-training/TD1_Bioinformatique/>
+
+Vous pouvez ensuite retourner sur Galaxy.
 
 
 ## Illumina SE
 
-Optional: You can rename your history (right panel).
+Optionnel: Vous pouvez renommer votre historique (panneau de droite).
 
-The 1st data set concerns a metagenomic study of the microbiome of the oral cavity of a snake. After extraction and fragmentation of the sample DNA, part of the 16S rRNA gene was amplified and sequenced (Illumina Single End) in order to identify the bacteria present. Due to time constraints, only part of the data will be analysed.
+Le 1er set de données concerne une étude métagénomique portant sur le microbiome de la cavité orale d'un serpent. Après extraction et fragmentation de l'ADN de l'échantillon, une partie de gène de l'ARNr 16S a été amplifié puis séquencé (Illumina Single End) afin d'identifier les bactéries présentes. Seule une partie des données sera analysée pour des raisons de temps.
 
 ### Raw data: FASTQ file
 
-1. Import the FASTQ file from the zenodo server:
+1. Importez le fichier FASTQ depuis le serveur zenodo : 
 
-Copy the address of the link:
+Copiez l'adresse du lien 
 
 <https://zenodo.org/record/3977236/files/female_oral2.fastq-4143.gz>
 
-In Galaxy, use the Upload Data button (top left) then Paste/Fetch data, copy the link and launch (start).
+Dans Galaxy, utilisez le bouton *Upload Data* (en haut à gauche) puis *Paste/Fetch dat*a, copiez le lien et lancez (*start*).
 
-2. Look at the file (eye icon).
+2. Regardez le fichier (*eye icon*).
 
-- What are the characteristics of the FASTQ format?
+> ❓ Quelles sont les caractéristiques du format FASTQ ?
 
-- Given that the scores are encoded using the SANGER/Illumina 1.8+ system, what is the score value for most of the bases at the start of the 1st read? Is this satisfactory?
+> ❓ Sachant que les scores sont encodés selon le système SANGER/Illumina 1.8+ (<https://support.illumina.com/help/BaseSpace_Sequence_Hub_OLH_009008_2/Source/Informatics/BS/QualityScoreEncoding_swBS.htm>), quelle est la valeur du score de la plupart des bases au début du 1er read ? Est-ce satisfaisant?
     
-### Quality control using FastQE and FastQC
+### Contrôle qualité avec FastQE et FastQC
 
-Open the FASTQ Quality Control toolbox (left panel).
+Ouvrir le FASTQ Quality Control toolbox (panneau de gauche).
 
 #### FastQE
 
-Explore the quality of your footage with FASTQE. “Mean scores” corresponds to the average of the scores calculated over all readings at each position. Scores are represented by emojis (ranked from 0 to 41):
+Explorer la qualité de vos séquences avec FASTQE. “Mean scores” correspond à la moyenne des scores calculées sur toutes les lectures à chaque position. Les scores sont représentés par des emojis (classés de 0 à 41) : 
 
 🚫❌👺💔🙅👾👿💀👻🙈🙉🙊🐵😿😾🙀💣🔥😡💩⚠️
 😀😅😏😊😙😗😚😃😘😆😄😋😄😝😛😜😉😁😄😎😍
 
-- What is the general trend for this dataset?
+> ❓ Quelle est la tendance générale pour ce dataset?
 
 #### FastQC
-Explore the quality of reads with FastQC (default settings). See the FastQC website for help and examples of analysis.
 
-- Per Base Sequence Quality: How long are the reads? How does the quality evolve along the reads?
+Evaluez plus en détail la qualité des lectures avec FastQC (<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>. Voir FastQC website pour l'aide et des exemples d'analyse.
 
-- Per sequence quality scores: What can be deduced from this graph?
+> ❓ *Per Base Sequence Quality*:  Quelle est la longueur des lectures ? Comment évolue la qualité le long des lectures ?
 
-- Per base sequence content: In the case of genome sequencing (without specific amplification), what should this graph look like? Is the result obtained normal in our case?
+> ❓ *Per sequence quality scores*: Que vous apprend ce graphe ?
 
-- Adapter content: Which adapter is detected?
+> ❓ *Per base sequence content*: Dans le cas d'un séquençage de génome (sans amplification), à quoi devrait ressembler ce graphe ? Le résultat obtenu est-il normal dans notre cas ?
+
+> ❓ *Adapter content*: Quel adaptateur est détecté ?
 
 ### Read procesing using Trimmomatic
 
-1. Use Trimmomatic (FASTQ Quality control section) to improve the quality of reads:
+Utilisez Trimmomatic (section FASTQ Quality control) pour améliorer la qualité des lectures :
 
-- Perform initial IllUMINACLIP step? Yes, select Nextera
+- *Perform initial IllUMINACLIP step? Yes, select Nextera*
 
-- Sliding window trimming (proposed by default)
+- *Sliding window trimming (proposed by default)*
   
-- Add a new Trimmomatic operation: Drop reads below a specific length (MINLEN): 20
+- Ajouter une nouvelle opération Trimmomatic : *Drop reads below a specific length (MINLEN): 20*
 
-2. Perform FastQC analysis again on the processed reads and compare the results to the raw data. Is the result acceptable?
+> ❓ Quel pourcentage de lectures a été éliminé (voir fichier log) ?
 
-3. What would be the next step to identify the microbial species present in the snake's oral cavity from these reads?
+> ❓ Refaites une analyse FastQC sur les lectures après traitement et comparez les résultats aux données brutes. Le résultat est-il acceptable ?
 
 ## PacBio Hifi
 
-This dataset contains 50,000 PacBio HiFi reads from the sequencing of a human genome (PacBio - GIAB sample HG002).
+Ce set de données contient 50 000 lectures PacBio HiFi provenant du séquençage d'un génome humain (PacBio - GIAB sample HG002).
 
-1. Import the file into Galaxy:
+Importez le fichier dans Galaxy :
 
 <https://zenodo.org/api/files/ff9aa6e3-3d69-451f-9798-7ea69b475989/m64011_190830_220126.Q20.subsample.fastq.gz>
 
-2. Perform quality control with Nanoplot (available in Nanopore). This tool can only be used for long reads (PacBio or Nanopore):
+Effectuez le contrôle qualité avec Nanoplot (disponible dans Nanopore). Cet outil n'est utilisable que pour les lectures longues (PacBio ou Nanopore) :
 
-Options for customizing the plot created:
+- *Options for customizing the plot created:*
 
-- Specify the bivariate format of the plots: dot
+  - *Specify the bivariate format of the plots: dot*
+  
+  - *Show the N50 mark in the read length histogram: Yes*
 
-- Show the N50 mark in the read length histogram: Yes
 
-3. Analysis:
+Analyse: 
 
-- What is the average length of reads? Significant variations in read size are observed in the PacBio data, unlike the Illumina data. Why?
-- What does N5O represent in this case?
-- How useful can the Yield by length chart be?
-- Read length vs Average read qualiy plot using dots: No read is observed with Q<20. Why? Is there a link between read size and quality?
+
+> ❓ On observe des variations importantes de taille de lecture dans les données PacBio, contrairement aux données Illumina. Pourquoi ? 
+
+> ❓ Quelle est la longueur moyenne des lectures ?
+
+> ❓ Comment est calculé le N5O dans ce cas ?
+
+Défintion du N50: Dans le cadre de l'assemblage d'un génome: 50% de l’assemblage est couvert par des contigs de longueur N50 ou supérieure. Les contigs sont classés par ordre de longueur décroissante et leur taille additionnée. N50 est la longueur du plus petit contig de la liste nécessaire pour couvrir au moins 50% du génome. Ici nous sommes dans le cadre d'un séquençage et non pas dans le cadre de l'assemblage d'un génome, les contigs sont donc des "reads" (ou "lectures" en français).
+
+> ❓ Quel peut être l'utilité du graphique Yield by length ?
+
+> ❓ Quelle est la qualité moyenne des lectures ?
+
+> ❓ On n'observe aucune lecture avec Q<20. Pourquoi ? Y a-t-il un lien entre taille des lectures et qualité ?
+
 
 ## Nanopore
 
-The last set corresponds to nanopore reads obtained from a plant genome. We will use PycoQC for quality control. This only works with Nanopores readings; it requires specific information provided by nanopore basecallers such as Guppy.
+Le dernier set correspond à des lectures nanopores obtenues à partir d'un génome de plante. Nous allons utiliser PycoQC pour le contrôle qualité. Celui ne fonctionne qu'avec des lectures Nanopores ; il nécessite des informations spécifiques fournies par les basecallers nanopore tels que Guppy.
 
-1. Import the files into Galaxy:
+1. Importez les fichiers dans Galaxy :
 
 <https://zenodo.org/api/files/ff9aa6e3-3d69-451f-9798-7ea69b475989/nanopore_basecalled-guppy.fastq.gz>
+
 <https://zenodo.org/api/files/ff9aa6e3-3d69-451f-9798-7ea69b475989/sequencing_summary.txt>
 
-2. Perform quality control with PycoQC
+2. Effectuez le contrôle qualité avec PycoQC
 
-- How many reads are available? How many bases does this represent?
+> ❓ Combien de reads sont disponibles ? Combien de bases cela représente ?
 
-- How do you explain the discrepancy between median reading size and N50?
+> ❓ Comment expliquez-vous l'écart entre taille médiane des lectures et N50 ? (Voir définition du N50 dans la partie PacBio HiFi du TD)
 
-- Basecalled reads length: what can you say about the distribution of lengths?*
+> ❓ Que pouvez-vous dire de la distribution des longueurs ?
 
-- Basecalled reads quality: What range do most quality scores fall into?
-
+> ❓ Dans quel intervalle se situent la plupart des scores de qualité ?

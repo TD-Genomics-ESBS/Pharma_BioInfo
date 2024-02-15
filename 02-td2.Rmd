@@ -1,62 +1,58 @@
-# Exploration of sequence databases
+# Exploration des banques de séquences
 
 In this practical, we will explore the main public genomic databases: NCBI (Nucleotides, Taxonomy...), UniProt, InterProScan...
 
-## Database exploration using Entrez
+## Interrogation des banques par Entrez
 
-Go to <http://www.ncbi.nlm.nih.gov/>.
+Aller sur <http://www.ncbi.nlm.nih.gov/>.
 
-### Search by annotation (Filters/Advanced)
+### Utilisation du n° d’accès : séquence nucléique NC_045512
 
-Select Nucleotide and search for sequences containing the BRCA1 gene for Homo sapiens using filters or advanced search.
+Sélectionnez Nucleotide sur le site du NCBI et recherchez la séquence NC_045512. De quoi s’agit-il ? Quelle est la longueur du génome ?
 
-- Why are there several sequences in RefSeq? In Genbank?
+> ❓ Consultez le champ *Comment*. De quelle banque provient cette séquence ? Est-elle fiable ? Quelle technologie de séquençage a été utilisée ? Que pouvez-vous dire de cette entrée par rapport à l’entrée initiale GenBank (1ère séquence du génome du SARS-Cov-2) ?
 
-- Look at the sequence KT152889. Quickly position the annotated elements for the gene on a diagram. What is the position of the variation on the sequence? What does it correspond to (type, codon)?
+> ❓ Recherchez la région codante correspondant à la protéine N (nucleocapsid phosphoprotein).
 
-- Among the features, the sequence source provides a cross-reference to the NCBI Taxonomy bank. Follow this link.
+> ❓ Que pensez-vous de la composition de cette protéine ? Quel problème peut poser une telle séquence dans une recherche de similarité ?
 
-### Taxonomy database
+> ❓ Affichez la séquence du génome au format fasta. Quelles sont les caractéristiques de ce format par rapport au format RefSeq ?
 
-- What human sub-species are listed in the Taxonomy database?
+### Recherche par l’annotation (*Filters/Advanced*)
 
-- How many genomes are available in the Genome database for Animals, Fungi, Plants (Viridiplantae) and Eukaryotes? Please comment.
+Recherchez dans Nucleotide les séquences comportant le gène BRCA1 pour Homo sapiens envous aidant des filtres ou de la recherche avancée.
 
-- To which bank does the sequence NC_045512 belong according to the access number?
+> ❓ Pourquoi y a-t-il plusieurs séquences dans RefSeq ? dans Genbank ?
 
-### Sequence retrieval with an access number
+> ❓ Regardez la séquence KT152889. Positionnez rapidement les éléments annotés du gène sur un diagramme. Quelle est la position de la variation sur la séquence ? A quoi correspond-elle (type, codon) ?
 
-Return on NCBI website and search the nucleic sequence NC_045512. For that, select Nucleotide on the NCBI website and search for the sequence with the access number NC_045512. 
+> ❓ Parmi les features, la source de la séquence fournit une référence croisée vers la banque Taxonomy du NCBI. Suivez ce lien.
 
-- What is it about? How long is the genome?
+### Banque Taxonomy
 
-- Look at the field *Comment*. To which bank does the sequence NC_045512 belong? Is it a reliable entry? What sequencing technology was used? What can you say about this entry compared to the original GenBank entry (1st SARS-Cov-2 genome sequence)?
+> ❓ Quelles sous-espèces humaines sont répertoriées dans la banque Taxonomy ?
 
-- Look for the coding region corresponding to the N protein (nucleocapsid phosphoprotein). What do you think about the composition of this protein? What problem might such a sequence pose in a similarity search?
+> ❓ Combien de génomes sont disponibles dans la banque Genome pour les Animaux, les champignons (Fungi), les plantes (Viridiplantae) et les eucaryotes ? Commentez.
 
-- Display the genome sequence in fasta format. What are the characteristics of this format compared to the RefSeq format?
+## Recherche de séquences protéiques dans UniProtKb (<www.uniprot.org>)
 
-## Search for protein sequences in UniProtKB (www.uniprot.org)
+Sélectionner la banque UniprotKB.
 
-Select the UniProtKB database
+### Utilisation des champs (Advanced search)
 
-### Use of fields (Advanced Search)
+> ❓ Combien de séquences protéiques humaines sont répertoriées dans UniprotKB ? dans SwissProt ?
 
-- How many human protein sequences are listed in the UniprotKb database? In Swissprot?
+> ❓ Rechercher la myotubularin-related protein 3 humaine. Comparer les entrées obtenues. Laquelle est-il préférable d’utiliser ?
 
-- Search for the human myotubularin-related protein 3. Compare the obtained entries.
+### Exemple d’entrée SwissProt : MUC1_HUMAN
 
-- Which is better to use?
+> ❓ L’existence de cette protéine est-elle établie (voir Protein existence en haut de page)?
 
-### Example of a SwissProt entry: MUC1_HUMAN
+> ❓ Comparez le format proposé par défaut, le format texte et le format fasta (accessibles
+dans Download).
 
-- Are we sure of the existence of this protein (see Protein existence at the top of the page)?
+> ❓ Combien d’isoformes décrites existe-t-il pour cette protéine (voir Sequences) ? Alignez les isoformes (Align) et voyez en quoi elles diffèrent.
 
-- Compare the current format, the text format and the fasta format (see Download).
-
-- How is this protein involved in breast cancer?
-
-- How many isoforms are reported for this protein (see Sequences)? Align isoforms and see their differences.
 
 ### Function – GO annotations
 
