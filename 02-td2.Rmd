@@ -64,7 +64,7 @@ Rechercher la protéine MUC1_HUMAN
 
 > ❓ La Go ontology permet de décrire les protéines selon 3 aspects. Lesquels ?
 
-> ❓ Suivez le lien de l'entrée GO:0004438.  Qu'est-ce que c'est (nom, description) ? A quel type de GO appartient-il ? Quelle est sa fréquence d'utilisation pour décrire les protéines ?
+> ❓ Suivez le lien vers l'entrée "negative regulation of intrinsic apoptotic signaling pathway in response to DNA damage by p53 class mediator".  De quoi s'agit-il ? De quel type de GO s'agit-il ? À quelle fréquence est-il utilisé pour décrire des protéines ?
 
 > ❓ Existe-t-il des synonymes pour ce terme GO ?
 
