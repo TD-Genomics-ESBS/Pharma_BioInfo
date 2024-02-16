@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Exploration des banques de séquences
 
 Dans ce TD, nous explorerons les principales bases de données génomiques publiques : NCBI (Nucléotides, Taxonomie...), UniProt, InterProScan...
@@ -8,7 +13,9 @@ Aller sur <http://www.ncbi.nlm.nih.gov/>.
 
 ### Utilisation du n° d’accès
 
-Sélectionnez *Nucleotide* sur le site du NCBI et recherchez la séquence NC_045512. De quoi s’agit-il ? Quelle est la longueur du génome ?
+Sélectionnez *Nucleotide* sur le site du NCBI et recherchez la séquence NC_045512. 
+
+> ❓ De quoi s’agit-il ? Quelle est la longueur du génome ?
 
 > ❓ Consultez le champ *Comment*. De quelle banque provient cette séquence ? Est-elle fiable ? Quelle technologie de séquençage a été utilisée ? Que pouvez-vous dire de cette entrée par rapport à l’entrée initiale GenBank (1ère séquence du génome du SARS-Cov-2) ?
 
